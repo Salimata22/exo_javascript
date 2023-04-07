@@ -1,4 +1,4 @@
-var salaireBrut ;
+/*var salaireBrut ;
 var bonus ;
 var genre;
 
@@ -15,7 +15,6 @@ function calculeSalaire(salaireBrut,bonus,genre) {
             salaire = salaire -  (17*salaireBrut)/100
             break;
                        
-    
         default:
             break;
     }
@@ -23,5 +22,35 @@ function calculeSalaire(salaireBrut,bonus,genre) {
     
     
 }
-
 console.log(calculeSalaire(2000,100,'femme'))
+*/
+
+
+function calculeSalaire(salaireBrut,genre,charge) {
+    var salaire;
+    var bonus = 150;
+    salaire = salaireBrut - (salaireBrut*12)/100
+
+    if (genre == 'femme') {
+        salaire = salaire - (salaireBrut*16)/100
+    }
+
+    else if(genre == 'homme' && charge == 4 ){
+        salaire = salaire - (salaireBrut*16)/100
+
+
+    }
+
+    else if(genre == 'homme' && charge == 3 ){
+        salaire = salaire - (salaireBrut*17)/100
+
+
+    }
+    else{
+        salaire = salaire - (salaireBrut*18)/100
+    }
+    
+   return salaire + bonus;
+}
+
+console.log(calculeSalaire(2000,'femme',0))

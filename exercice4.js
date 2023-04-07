@@ -1,4 +1,4 @@
-var tableau = [];
+/*var tableau = [];
 var a = 0;
 
 function somme(tableau) {
@@ -11,4 +11,19 @@ function somme(tableau) {
     
 }
 
-console.log(somme([4 ,7, 8, 3,7,2]))
+console.log(somme(4 ,7, 8, 3,7,2,6743))
+*/
+
+//autre maniere
+function sommes(...args) {
+    var sum = 0;
+
+    for (var i =0; i < args.length; i++) {
+        
+       sum +=  args[i] ; 
+    }
+    return sum
+    
+}
+
+console.log(sommes(4 ,7, 8, 3,7,2,6743))
